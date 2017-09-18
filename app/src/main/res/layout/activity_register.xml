@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9EBEA">
+
+    <TextView
+        android:id="@+id/title"
+        android:textColor="#F9EBEA"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:text="Registrar Ingresos / Egresos " />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Monto"
+        android:ems="10"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/title"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentEnd="true" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:onClick="radioButtonClicked"
+            android:text="Ingreso" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radioButtonClicked"
+            android:text="Egreso" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:text="Tipo_de_ingreso"
+        android:entries="@array/Tipo_de_ingreso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="25dp" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:background="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:onClick="Registrar"
+        android:text="Registrar"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

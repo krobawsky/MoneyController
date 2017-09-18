@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MoneyController</string>
+
+    <string-array name="Tipo_de_ingreso">
+        <item>Ahorro</item>
+        <item>Tarjeta de Crédito</item>
+        <item>Efectivo</item>
+    </string-array>
+</resources>
